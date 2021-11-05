@@ -6,6 +6,7 @@ import { Text, View } from "../components/Themed";
 import { RootTabScreenProps } from "../types";
 
 import * as Progress from "react-native-progress";
+import TransactionSection from "../components/card-page/transaction-section";
 
 export default function CardScreen() {
   return (
@@ -17,6 +18,8 @@ export default function CardScreen() {
       />
       <Text style={styles.title}> Limit </Text>
       <Progress.Bar progress={0.3} width={200} />
+
+      <TransactionSection />
     </View>
   );
 }

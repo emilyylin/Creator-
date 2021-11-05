@@ -11,8 +11,7 @@ import {
 import { Text, View } from "../Themed";
 import Income from "./income";
 
-const incomeSection = (props) => {
-  const [modalVisible, setModalVisible] = useState(false);
+const incomeSection = () => {
   return (
     <View style={{ marginTop: 30, marginBottom: 30 }}>
       <Income

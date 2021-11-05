@@ -8,7 +8,7 @@ import { Text, View } from "../Themed";
 const channelSection = () => {
   return (
     <View>
-      <Text style={styles.title}> Channels </Text>
+      <Text style={styles.title}>Channels </Text>
       <Channel
         name="TikTok"
         username="olivia_xo"
