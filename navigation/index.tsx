@@ -21,6 +21,8 @@ import NotFoundScreen from '../screens/NotFoundScreen';
 import TabOneScreen from '../screens/TabOneScreen';
 import TabTwoScreen from '../screens/TabTwoScreen';
 
+import {useState} from 'react'; 
+
 import ProfileScreen from '../screens/ProfileScreen';
 import CardScreen from '../screens/CardScreen';
 import DashboardScreen from '../screens/DashboardScreen';
@@ -80,18 +82,15 @@ function BottomTabNavigator() {
           tabBarIcon: ({ color }) => <MaterialIcons name="monetization-on" size={24} color={color} />,
           headerRight: () => (
             <Pressable
-              onPress={() => navigation.navigate('Modal')}
+              // onPress={() => navigation.navigate('Modal')}
               style={({ pressed }) => ({
                 opacity: pressed ? 0.5 : 1,
               })}>
-              <FontAwesome
-                name="info-circle"
-                size={25}
-                color={Colors[colorScheme].text}
-                style={{ marginRight: 15 }}
-              />
+                <Ionicons name="refresh" size={24} color="black" />
             </Pressable>
           ),
+          
+
         })}
       />
       <BottomTab.Screen
@@ -99,8 +98,17 @@ function BottomTabNavigator() {
         component={CardScreen}
         options={{
           title: 'Card',
-          tabBarIcon: ({ color }) => <AntDesign name="creditcard" size={24} color={color} />
+          tabBarIcon: ({ color }) => <AntDesign name="creditcard" size={24} color={color} />,
           // tabBarIcon: ({ color }) => <TabBarIcon name="creditcard" color={color} />,
+          headerRight: () => (
+            <Pressable
+              // onPress={() => navigation.navigate('Modal')}
+              style={({ pressed }) => ({
+                opacity: pressed ? 0.5 : 1,
+              })}>
+                <Ionicons name="refresh" size={24} color="black" />
+            </Pressable>
+          ),
         }}
       />
       <BottomTab.Screen
@@ -109,6 +117,15 @@ function BottomTabNavigator() {
         options={{
           title: 'Resources',
           tabBarIcon: ({ color }) => <AntDesign name="book" size={24} color={color} />,
+          headerRight: () => (
+            <Pressable
+              // onPress={() => navigation.navigate('Modal')}
+              style={({ pressed }) => ({
+                opacity: pressed ? 0.5 : 1,
+              })}>
+                <Ionicons name="refresh" size={24} color="black" />
+            </Pressable>
+          ),
         }}
       />
       <BottomTab.Screen
@@ -117,6 +134,15 @@ function BottomTabNavigator() {
         options={{
           title: 'Profile',
           tabBarIcon: ({ color }) => <Ionicons name="person" size={24} color={color} />,
+          headerRight: () => (
+            <Pressable
+              // onPress={() => navigation.navigate('Modal')}
+              style={({ pressed }) => ({
+                opacity: pressed ? 0.5 : 1,
+              })}>
+                <Ionicons name="refresh" size={24} color="black" />
+            </Pressable>
+          ),
         }}
       />
     </BottomTab.Navigator>

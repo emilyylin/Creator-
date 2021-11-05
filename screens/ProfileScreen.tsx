@@ -17,7 +17,6 @@ export default function ProfileScreen({ navigation }: RootTabScreenProps<'Profil
 
 const styles = StyleSheet.create({
   container: {
-    font: 'Inter',
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
