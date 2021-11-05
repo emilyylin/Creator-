@@ -16,3 +16,5 @@ Creators can retrieve financial information on topics such as loans, investing, 
 
 # Tools & Technology we used
 React Native, Expo, TypeScript, Figma
+
+Designed by Emma Wu & Developed by Emily Lin
