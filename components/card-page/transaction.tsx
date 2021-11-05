@@ -10,7 +10,7 @@ const transaction = (props) => {
     <View style={styles.transactionContainer}>
       <View style={{ flexDirection: "row", alignItems: "center" }}>
         <View style={{ flexDirection: "column", paddingLeft: 15 }}>
-          <Text style={{ fontSize: "15", fontWeight: "600" }}>
+          <Text style={{ fontSize: 15, fontWeight: "600" }}>
             {props.name}
           </Text>
           <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -33,7 +33,7 @@ const transaction = (props) => {
             right: 10,
           }}
         >
-          <Text style={{ fontSize: "15", fontWeight: "600", right: 0 }}>
+          <Text style={{ fontSize: 15, fontWeight: "600", right: 0 }}>
             -${props.purchase}
           </Text>
           <View style={{ flexDirection: "row", right: 0 }}>

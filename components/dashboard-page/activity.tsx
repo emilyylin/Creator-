@@ -12,7 +12,7 @@ const activity = (props) => {
         <Image style={{ width: 40, height: 40 }} source={props.imgpath} />
 
         <View style={{ flexDirection: "column", paddingLeft: 15 }}>
-          <Text style={{ fontSize: "15", fontWeight: "600" }}>
+          <Text style={{ fontSize: 15, fontWeight: "600" }}>
             {props.name}
           </Text>
           <View style={{ flexDirection: "row", alignItems: "center" }}>
@@ -35,7 +35,7 @@ const activity = (props) => {
             right: 10,
           }}
         >
-          <Text style={{ fontSize: "15", fontWeight: "600", right: 0 }}>
+          <Text style={{ fontSize: 15, fontWeight: "600", right: 0 }}>
             ${props.income}
           </Text>
           <View style={{ flexDirection: "row", right: 0 }}>
