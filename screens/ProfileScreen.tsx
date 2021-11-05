@@ -38,10 +38,10 @@ export default function ProfileScreen({
       </View>
 
       <View style={{ position: "absolute", bottom: 50, alignItems: "center" }}>
-        <Text style={{ paddingBottom: 20 }}>Remove a Channel</Text>
-        <Text style={{ fontWeight: "normal", fontSize: 12, color: "red" }}>
+        <TouchableOpacity><Text style={{ paddingBottom: 20 }}>Remove a Channel</Text></TouchableOpacity>
+        <TouchableOpacity  onPress={() => navigation.navigate("Main")}><Text style={{ fontWeight: "normal", fontSize: 12, color: "red" }}>
           Logout
-        </Text>
+        </Text></TouchableOpacity>
       </View>
     </View>
   );

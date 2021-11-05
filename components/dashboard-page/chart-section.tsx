@@ -4,6 +4,9 @@ import ToggleSwitch from "toggle-switch-react-native";
 import { useState } from "react";
 import { MaterialIcons } from "@expo/vector-icons";
 import Chart from "./chart";
+import SelectDropdown from 'react-native-select-dropdown';
+
+import styles from "../../assets/styles/dashboard-style";
 
 import { Text, View } from "../Themed";
 
@@ -13,6 +16,10 @@ const chartSection = (props) => {
 
   const [isVOR, setVOR] = useState(false);
   const toggleVOR = () => setVOR((previousState) => !previousState);
+
+  const [isSwitchSites, setSwitchSites] = useState(false);
+    
+  const sites= ["All", "Youtube", "Twitch", "TikTok"];
   return (
     <View>
       <View
@@ -34,7 +41,8 @@ const chartSection = (props) => {
             </TouchableOpacity>
           </View>
         </View>
-        <View style={{ position: "absolute", right: 10 }}>
+        
+        <View style={{ position: "absolute", right: 10, flexDirection:"col", alignItems:"flex-end"}}>
           <ToggleSwitch
             isOn={isEnabled}
             onColor="black"
@@ -44,6 +52,29 @@ const chartSection = (props) => {
             size="small"
             onToggle={toggleSwitch}
           />
+          <TouchableOpacity style={{flexDirection:"row", alignItems:"center"}}>
+          <SelectDropdown
+            data={sites}
+            defaultValue="All"
+            buttonStyle={styles.siteDropDown}
+            buttonTextStyle={styles.siteDropDownText}
+            rowTextStyle={styles.rowTextStyle}
+            rowStyle={styles.rowStyle}
+            onSelect={(selectedItem, index) => {
+              setSwitchSites((previousState) => !previousState)
+            }}
+            buttonTextAfterSelection={(selectedItem, index) => {
+              // text represented after item is selected
+              // if data array is an array of objects then return selectedItem.property to render after item is selected
+              return selectedItem
+            }}
+            rowTextForSelection={(item, index) => {
+              // text represented for each item in dropdown
+              // if data array is an array of objects then return item.property to represent item in dropdown
+              return item
+            }} />
+        <MaterialIcons name="sort" size={20} color="black" />
+        </TouchableOpacity>
         </View>
       </View>
       <Chart
@@ -51,11 +82,38 @@ const chartSection = (props) => {
           labels: ["Jan", "Mar", "May", "Jul", "Sept", "Nov"],
           datasets: [
             {
-              data: [0, 8, 6, 13, 15, 13, 14, 13, 18],
+              data: [Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                (Math.random() * 100) +100],
             },
           ],
         }}
+        isNegative={false}
       />
+      {/* <Chart data={{
+          labels: ["0", "5", "10", "15", "20", "25", "30"],
+          datasets: [
+            {
+              data: [Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                (Math.random() * 100) +100],
+            },
+          ],
+        }}/> */}
     </View>
   );
 };

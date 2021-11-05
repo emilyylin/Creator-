@@ -1,4 +1,5 @@
 import React from "react";
+import {useState} from "react";
 import { StyleSheet, Dimensions, Switch, Image } from "react-native";
 import styles from "../../assets/styles/dashboard-style";
 import SelectDropdown from "react-native-select-dropdown";
@@ -8,6 +9,9 @@ import { Text, View } from "../Themed";
 import FontAwesome from "react-native-vector-icons/FontAwesome";
 
 const activitySection = () => {
+
+  const [isSwitchMonth, setNewMonth] = useState(false);
+
   const months = [
     "Jan",
     "Feb",
@@ -41,7 +45,7 @@ const activitySection = () => {
           // defaultValueByIndex={1}
           defaultValue={"Nov"}
           onSelect={(selectedItem, index) => {
-            console.log(selectedItem, index);
+            setNewMonth((previousState) => !previousState)
           }}
           buttonTextAfterSelection={(selectedItem, index) => {
             return selectedItem;
@@ -63,25 +67,25 @@ const activitySection = () => {
 
       <Activity
         name="TikTok"
-        posts="17"
+        posts={Math.ceil(Math.random()*10)}
         views="600k"
-        income="600.20"
+        income={Math.ceil(Math.random()*500)}
         percent="5.0"
         imgpath={require("../../assets/images/profile-images/tiktok.png")}
       />
       <Activity
         name="Twitch.tv"
-        posts="10"
+        posts={Math.ceil(Math.random()*10)}
         views="35k"
-        income="915"
+        income={Math.ceil(Math.random()*5000)}
         percent="2.0"
         imgpath={require("../../assets/images/profile-images/twitch.png")}
       />
       <Activity
         name="Youtube"
-        posts="5"
+        posts={Math.ceil(Math.random()*10)}
         views="550k"
-        income="2,050.20"
+        income={Math.ceil(Math.random()*5000)}
         percent="12.0"
         imgpath={require("../../assets/images/profile-images/youtube.png")}
       />
