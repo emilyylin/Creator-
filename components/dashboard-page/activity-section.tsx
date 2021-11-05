@@ -33,7 +33,9 @@ const activitySection = () => {
           paddingBottom: 20,
         }}
       >
-        <Text style={styles.title}>Activity</Text>
+        <View style={{ paddingRight: 45 }}>
+          <Text style={styles.title}>Activity</Text>
+        </View>
         <SelectDropdown
           data={months}
           // defaultValueByIndex={1}
