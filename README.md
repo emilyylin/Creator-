@@ -17,4 +17,4 @@ The creator is rewarded with cashback bonuses based on positive performing metri
 Creators can retrieve financial information on topics such as loans, investing, line of credit and applying for a mortgage. The FAQ section which is dedicated to common questions that creators might have regarding financial services and how it impacts them.
 
 # Tools & Technology we used
-React Native, Expo, TypeScript, Cheerio, Figma
+React Native, Expo, TypeScript, Figma
