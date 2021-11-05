@@ -21,8 +21,10 @@ import { MaterialIcons } from "@expo/vector-icons";
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
 import ModalScreen from "../screens/ModalScreen";
+import LoanModalScreen from "../screens/LoanModalScreen";
 import MainScreen from "../screens/MainScreen";
 import NotFoundScreen from "../screens/NotFoundScreen";
+import SurveyScreen from "../screens/SurveyScreen";
 import TabOneScreen from "../screens/TabOneScreen";
 import TabTwoScreen from "../screens/TabTwoScreen";
 
@@ -78,6 +80,10 @@ function RootNavigator() {
         <Stack.Screen name="Modal" component={ModalScreen} />
       </Stack.Group>
       <Stack.Screen name="Main" component={MainScreen} />
+      <Stack.Screen name="Survey" component={SurveyScreen} />
+      <Stack.Group screenOptions={{ presentation: "modal" }}>
+        <Stack.Screen name="LoanModal" component={LoanModalScreen} />
+      </Stack.Group>
     </Stack.Navigator>
   );
 }

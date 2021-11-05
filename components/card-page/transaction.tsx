@@ -37,8 +37,7 @@ const transaction = (props) => {
             -${props.purchase}
           </Text>
           <View style={{ flexDirection: "row", right: 0 }}>
-            <Entypo name="triangle-up" size={12} color="#35B234" />
-            <Text style={{ fontWeight: "400", fontSize: 12, color: "#35B234" }}>
+            <Text style={{ fontWeight: "400", fontSize: 12, color: "red" }}>
               {props.type}
             </Text>
           </View>

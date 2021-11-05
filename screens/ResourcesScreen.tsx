@@ -30,10 +30,30 @@ export default function ResourcesScreen({
     <ScrollView style={{ backgroundColor: "white" }}>
       <View style={styles.container}>
         <View style={{ flexDirection: "row" }}>
-          <ResourceBox
-            name="Loans"
-            url="https://www.td.com/ca/en/personal-banking/how-to/borrowing/compare-loans-and-lines-of-credit/?tdtab=1&cm_sp=:GOOGLE:EN+-+Line+of+Credit+-+Brand+(22_S_PL_LUC_AO_ACQ_ENFR_NAT):DIF:Line+of+Credit+-+BR+-+Exact&gclid=CjwKCAjwiY6MBhBqEiwARFSCPnH4qAIUcYYla9JMIkscQOC193VXmc2S8Gl2fv2Db_70L8PCkgFgxxoC_NoQAvD_BwE&gclsrc=aw.ds"
-          />
+          <TouchableOpacity
+        onPress={() => navigation.navigate("LoanModal")}
+        style={{
+          backgroundColor: "#EDEDED",
+          padding: 20,
+          borderRadius: 13,
+          margin: 5,
+          height: 140,
+          width: 160,
+        }}
+      >
+        <Text
+          style={{
+            bottom: 15,
+            right: 15,
+            position: "absolute",
+            fontWeight: "700",
+            fontSize: 20,
+            textAlign: "right",
+          }}
+        >
+          Loans
+        </Text>
+      </TouchableOpacity>
           <ResourceBox
             name="Invest"
             url="https://www.td.com/ca/en/investing/"

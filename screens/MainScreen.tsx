@@ -1,5 +1,5 @@
 import * as React from "react";
-import { StyleSheet, Image, Dimensions } from "react-native";
+import { StyleSheet, Image, Dimensions, TouchableOpacity } from "react-native";
 import { RootTabScreenProps } from "../types";
 import { Text, View } from "../components/Themed";
 
@@ -8,7 +8,9 @@ export default function MainScreen({
 }: RootTabScreenProps<"Main">) {
   return (
     <View style={styles.container}>
+      <TouchableOpacity onPress={() => navigation.navigate("Survey")}>
       <Image source={require("tdhackweek/assets/images/CreatorPlus.png")} />
+      </TouchableOpacity>
     </View>
   );
 }

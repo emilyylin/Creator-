@@ -1,5 +1,5 @@
 import * as React from "react";
-import { StyleSheet, Image } from "react-native";
+import { StyleSheet, Image, TouchableOpacity } from "react-native";
 
 import EditScreenInfo from "../components/EditScreenInfo";
 import { Text, View } from "../components/Themed";
@@ -11,7 +11,9 @@ import LimitSection from "../components/card-page/limit-section";
 export default function CardScreen() {
   return (
     <View style={styles.container}>
+      <TouchableOpacity>
       <Image source={require("../assets/images/card-images/CreatorCard.png")} />
+      </TouchableOpacity>
       <Image
         style={{ marginTop: 20 }}
         source={require("../assets/images/card-images/perks.png")}
