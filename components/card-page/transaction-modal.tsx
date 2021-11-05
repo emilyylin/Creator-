@@ -6,7 +6,14 @@ import Transaction from "./transaction";
 
 const transactionModal = (props) => {
   return (
-    <View style={{ marginTop: 30, marginBottom: 30 }}>
+    <View
+      style={{
+        marginTop: 30,
+        marginBottom: 30,
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <View style={{ flexDirection: "row", alignItems: "center" }}>
         <FontAwesome5
           name="uber"

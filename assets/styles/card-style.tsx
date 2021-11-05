@@ -6,9 +6,9 @@ export default StyleSheet.create({
     fontWeight: "bold",
     textAlign: "left",
     backgroundColor: "white",
-    paddingRight: 190,
+    paddingRight: 170,
     paddingTop: 20,
-    paddingBottom: 20,
+    paddingBottom: 10,
   },
   modalTitle: {
     fontSize: 22,
@@ -25,7 +25,7 @@ export default StyleSheet.create({
     paddingTop: 10,
     borderBottomColor: "#EDEDED",
     borderBottomWidth: 1,
-    width: 350,
+    width: 300,
   },
   centeredView: {
     flex: 1,
@@ -47,5 +47,14 @@ export default StyleSheet.create({
   modalText: {
     marginBottom: 15,
     textAlign: "center",
+  },
+  limitBox: {
+    backgroundColor: "#EDEDED",
+    marginBottom: 0,
+    padding: 20,
+    borderRadius: 13,
+    margin: 5,
+    height: 105,
+    width: 335,
   },
 });

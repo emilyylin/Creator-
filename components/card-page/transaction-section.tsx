@@ -47,7 +47,13 @@ const transactionSection = () => {
         </TouchableOpacity>
       </View>
 
-      <View style={{ flexDirection: "row", alignItems: "center" }}>
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <FontAwesome5
           name="uber"
           size={24}
@@ -62,7 +68,13 @@ const transactionSection = () => {
           type="purchase"
         />
       </View>
-      <View style={{ flexDirection: "row", alignItems: "center" }}>
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <Ionicons
           name="cafe"
           size={24}
@@ -77,7 +89,13 @@ const transactionSection = () => {
           type="purchase"
         />
       </View>
-      <View style={{ flexDirection: "row", alignItems: "center" }}>
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
         <Ionicons
           name="cafe"
           size={24}

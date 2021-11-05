@@ -5,8 +5,8 @@ import EditScreenInfo from "../components/EditScreenInfo";
 import { Text, View } from "../components/Themed";
 import { RootTabScreenProps } from "../types";
 
-import * as Progress from "react-native-progress";
 import TransactionSection from "../components/card-page/transaction-section";
+import LimitSection from "../components/card-page/limit-section";
 
 export default function CardScreen() {
   return (
@@ -16,9 +16,7 @@ export default function CardScreen() {
         style={{ marginTop: 20 }}
         source={require("../assets/images/card-images/perks.png")}
       />
-      <Text style={styles.title}> Limit </Text>
-      <Progress.Bar progress={0.3} width={200} />
-
+      <LimitSection />
       <TransactionSection />
     </View>
   );
