@@ -1,8 +1,6 @@
 import React from "react";
-import { StyleSheet, Dimensions, Switch, Image } from "react-native";
 import styles from "../../assets/styles/card-style";
 
-import { Entypo } from "@expo/vector-icons";
 import { Text, View } from "../Themed";
 
 const transaction = (props) => {
@@ -10,9 +8,7 @@ const transaction = (props) => {
     <View style={styles.transactionContainer}>
       <View style={{ flexDirection: "row", alignItems: "center" }}>
         <View style={{ flexDirection: "column", paddingLeft: 15 }}>
-          <Text style={{ fontSize: 15, fontWeight: "600" }}>
-            {props.name}
-          </Text>
+          <Text style={{ fontSize: 15, fontWeight: "600" }}>{props.name}</Text>
           <View style={{ flexDirection: "row", alignItems: "center" }}>
             <Text
               style={{ fontSize: 12, fontWeight: "normal", paddingRight: 20 }}

@@ -1,5 +1,4 @@
 import React from "react";
-import { Image } from "react-native";
 
 import { Entypo } from "@expo/vector-icons";
 

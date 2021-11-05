@@ -17,22 +17,22 @@ export default StyleSheet.create({
     borderBottomWidth: 1,
     width: 370,
   },
-  siteDropDown:{
-    width:90,
-    height:30,
-    backgroundColor:"white"
+  siteDropDown: {
+    width: 90,
+    height: 30,
+    backgroundColor: "white",
   },
-  siteDropDownText:{
+  siteDropDownText: {
     color: "#18D89F",
     textAlign: "right",
-    fontSize:13,
+    fontSize: 13,
   },
-  rowTextStyle:{
-    fontSize:13,
-    textAlign:"right",
+  rowTextStyle: {
+    fontSize: 13,
+    textAlign: "right",
   },
-  rowStyle:{
-    width:80,
+  rowStyle: {
+    width: 80,
   },
   dropdown1BtnStyle: {
     height: 25,

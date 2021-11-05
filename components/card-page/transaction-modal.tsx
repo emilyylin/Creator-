@@ -1,10 +1,10 @@
 import React from "react";
 import { Ionicons } from "@expo/vector-icons";
 import { FontAwesome5 } from "@expo/vector-icons";
-import { Text, View } from "../Themed";
+import { View } from "../Themed";
 import Transaction from "./transaction";
 
-const transactionModal = (props) => {
+const transactionModal = () => {
   return (
     <View
       style={{

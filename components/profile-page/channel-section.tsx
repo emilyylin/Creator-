@@ -1,5 +1,4 @@
 import React from "react";
-import { StyleSheet, Dimensions, Switch, Image } from "react-native";
 import styles from "../../assets/styles/profile-style";
 
 import Channel from "./channel";

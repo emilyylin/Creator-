@@ -1,5 +1,4 @@
 import * as React from "react";
-import { useState } from "react";
 import {
   StyleSheet,
   TouchableOpacity,
@@ -31,29 +30,29 @@ export default function ResourcesScreen({
       <View style={styles.container}>
         <View style={{ flexDirection: "row" }}>
           <TouchableOpacity
-        onPress={() => navigation.navigate("LoanModal")}
-        style={{
-          backgroundColor: "#EDEDED",
-          padding: 20,
-          borderRadius: 13,
-          margin: 5,
-          height: 140,
-          width: 160,
-        }}
-      >
-        <Text
-          style={{
-            bottom: 15,
-            right: 15,
-            position: "absolute",
-            fontWeight: "700",
-            fontSize: 20,
-            textAlign: "right",
-          }}
-        >
-          Loans
-        </Text>
-      </TouchableOpacity>
+            onPress={() => navigation.navigate("LoanModal")}
+            style={{
+              backgroundColor: "#EDEDED",
+              padding: 20,
+              borderRadius: 13,
+              margin: 5,
+              height: 140,
+              width: 160,
+            }}
+          >
+            <Text
+              style={{
+                bottom: 15,
+                right: 15,
+                position: "absolute",
+                fontWeight: "700",
+                fontSize: 20,
+                textAlign: "right",
+              }}
+            >
+              Loans
+            </Text>
+          </TouchableOpacity>
           <ResourceBox
             name="Invest"
             url="https://www.td.com/ca/en/investing/"

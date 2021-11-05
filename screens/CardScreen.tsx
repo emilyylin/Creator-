@@ -1,9 +1,7 @@
 import * as React from "react";
 import { StyleSheet, Image, TouchableOpacity } from "react-native";
 
-import EditScreenInfo from "../components/EditScreenInfo";
-import { Text, View } from "../components/Themed";
-import { RootTabScreenProps } from "../types";
+import { View } from "../components/Themed";
 
 import TransactionSection from "../components/card-page/transaction-section";
 import LimitSection from "../components/card-page/limit-section";
@@ -12,7 +10,9 @@ export default function CardScreen() {
   return (
     <View style={styles.container}>
       <TouchableOpacity>
-      <Image source={require("../assets/images/card-images/CreatorCard.png")} />
+        <Image
+          source={require("../assets/images/card-images/CreatorCard.png")}
+        />
       </TouchableOpacity>
       <Image
         style={{ marginTop: 20 }}

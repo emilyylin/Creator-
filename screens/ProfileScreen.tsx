@@ -1,7 +1,6 @@
 import * as React from "react";
 import { StyleSheet, Image, TouchableOpacity, Linking } from "react-native";
 
-import EditScreenInfo from "../components/EditScreenInfo";
 import { Text, View } from "../components/Themed";
 import { RootTabScreenProps } from "../types";
 
@@ -38,10 +37,14 @@ export default function ProfileScreen({
       </View>
 
       <View style={{ position: "absolute", bottom: 50, alignItems: "center" }}>
-        <TouchableOpacity><Text style={{ paddingBottom: 20 }}>Remove a Channel</Text></TouchableOpacity>
-        <TouchableOpacity  onPress={() => navigation.navigate("Main")}><Text style={{ fontWeight: "normal", fontSize: 12, color: "red" }}>
-          Logout
-        </Text></TouchableOpacity>
+        <TouchableOpacity>
+          <Text style={{ paddingBottom: 20 }}>Remove a Channel</Text>
+        </TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate("Main")}>
+          <Text style={{ fontWeight: "normal", fontSize: 12, color: "red" }}>
+            Logout
+          </Text>
+        </TouchableOpacity>
       </View>
     </View>
   );

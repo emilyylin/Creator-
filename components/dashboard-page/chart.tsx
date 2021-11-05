@@ -1,11 +1,9 @@
 import React from "react";
-import { StyleSheet, Dimensions, Switch, Image } from "react-native";
+import { Dimensions } from "react-native";
 
-import { LineChart, ProgressChart } from "react-native-chart-kit";
+import { LineChart } from "react-native-chart-kit";
 
-import { MaterialIcons } from "@expo/vector-icons";
-
-import { Text, View } from "../Themed";
+import { View } from "../Themed";
 
 const chart = (props) => {
   return (
@@ -29,7 +27,7 @@ const chart = (props) => {
         style={{
           marginVertical: 8,
           borderRadius: 16,
-          marginLeft:-10
+          marginLeft: -10,
         }}
       />
     </View>

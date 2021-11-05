@@ -1,7 +1,5 @@
 import React from "react";
-import { StyleSheet, TouchableOpacity, Image, Linking } from "react-native";
-
-import { MaterialIcons } from "@expo/vector-icons";
+import { TouchableOpacity, Linking } from "react-native";
 
 import { Text, View } from "../Themed";
 

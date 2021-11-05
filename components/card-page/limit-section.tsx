@@ -1,16 +1,11 @@
 import React from "react";
 import styles from "../../assets/styles/card-style";
 import { useState } from "react";
-import { TouchableOpacity, Alert, ScrollView, Modal } from "react-native";
 import { Text, View } from "../Themed";
-
-import { FontAwesome5 } from "@expo/vector-icons";
-import { Ionicons } from "@expo/vector-icons";
 
 import * as Progress from "react-native-progress";
 
 const limitSection = () => {
-  const [modalVisible, setModalVisible] = useState(false);
   return (
     <View>
       <Text style={styles.title}> Limit </Text>

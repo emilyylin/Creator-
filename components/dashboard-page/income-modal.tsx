@@ -1,14 +1,6 @@
 import React from "react";
-import { useState } from "react";
-import {
-  TouchableOpacity,
-  Modal,
-  Alert,
-  Pressable,
-  ScrollView,
-} from "react-native";
 
-import { Text, View } from "../Themed";
+import { View } from "../Themed";
 import Income from "./income";
 
 const incomeSection = () => {

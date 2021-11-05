@@ -1,8 +1,7 @@
 import React from "react";
-import { StyleSheet, Dimensions, Switch, Image } from "react-native";
+import { Image } from "react-native";
 import styles from "../../assets/styles/dashboard-style";
 
-import { Entypo } from "@expo/vector-icons";
 import { Text, View } from "../Themed";
 
 const income = (props) => {
