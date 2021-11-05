@@ -4,21 +4,19 @@ import { StyleSheet, TouchableOpacity, Image, Linking} from 'react-native';
 
 import {Collapse,CollapseHeader, CollapseBody, AccordionList} from 'accordion-collapse-react-native';
 import { MaterialIcons } from '@expo/vector-icons';
-import { Entypo } from '@expo/vector-icons';
 
 import EditScreenInfo from '../components/EditScreenInfo';
 import { Text, View } from '../components/Themed';
 import { RootTabScreenProps } from '../types';
 import iconSet from '@expo/vector-icons/build/Fontisto';
 
+import FAQ from '../components/resources-page/faq'
 export default function ResourcesScreen({ navigation }: RootTabScreenProps<'Resources'>) {
 
     const [count, setCount] = useState(0);
     const onPress = () => Linking.canOpenURL("https://www.td.com/ca/en/personal-banking/book-appointment/#/appointment-type").then(() => {
         Linking.openURL("https://www.td.com/ca/en/personal-banking/book-appointment/#/appointment-type");
     });
-
-
 
   return (
     <View style={styles.container}>
@@ -39,43 +37,40 @@ export default function ResourcesScreen({ navigation }: RootTabScreenProps<'Reso
                 <Text style={styles.resourcesBoxText}> Mortgage </Text>
             </View>
         </View>
+
+        <Text style={styles.title}> FAQ </Text>
         
-        <Collapse>
-            <CollapseHeader>
-                <View style={styles.faqQuestion}>
-                    <Text>How can I apply for a loan online?</Text>
-                    <MaterialIcons name="keyboard-arrow-down" size={24} color="grey" />
-                </View>
-            </CollapseHeader>
-            <CollapseBody>
-                <Text>Ta daa!</Text>
-            </CollapseBody>
-        </Collapse>
+        <View style={{flexDirection:"column", justifyContent:"center", alignItems:"center"}}>
+
+        <FAQ question="How can I apply for a loan online?" answer="You don't You don't You don't You don't"/>
+        <FAQ question="What is the best way to gain credit?" answer="You don't You don't You don't You don't"/>
+        <FAQ question="What options do I have for a line of credit?" answer="You don't You don't You don't You don't"/>
+        <FAQ question="Should I have a consistent post schedule?" answer="You don't You don't You don't You don't"/>
+        <FAQ question="How does engagement affect cashback?" answer="You don't You don't You don't You don't"/>
+
+        </View>
 
 
         <TouchableOpacity style={styles.button} onPress={onPress} >    
             <MaterialIcons name="chat" size={24} color="#18D89F"/>
-            <Text style={styles.buttonText}>  Book an Appointment </Text>
+            <Text style={styles.buttonText}> Book an Appointment </Text>
         </TouchableOpacity>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
- faqQuestion: {
-    flexDirection: "row",
-    padding: 10,
-    textAlign:"left"
- },
   container: {
-    flex:1,
+    flex:2,
     alignItems: 'center',
     justifyContent: 'center'
   },
   title: {
     fontSize: 20,
     fontWeight: 'bold',
-    textAlign: "left"
+    textAlign: "left",
+    paddingTop: 40,
+    paddingBottom: 10
   },
   resourcesBox: {
     backgroundColor: "#EDEDED",
@@ -105,6 +100,7 @@ const styles = StyleSheet.create({
     flexDirection:"row",
     justifyContent: "center",
     width: 250,
+    marginTop: 30
 
   },
   buttonText: {
