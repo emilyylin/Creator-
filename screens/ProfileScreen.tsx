@@ -5,6 +5,8 @@ import EditScreenInfo from "../components/EditScreenInfo";
 import { Text, View } from "../components/Themed";
 import { RootTabScreenProps } from "../types";
 
+import ChannelSection from "../components/profile-page/channel-section";
+
 import { AntDesign } from "@expo/vector-icons";
 
 export default function ProfileScreen({
@@ -12,7 +14,7 @@ export default function ProfileScreen({
 }: RootTabScreenProps<"Profile">) {
   return (
     <View style={styles.container}>
-      <View style={{ flexDirection: "row" }}>
+      <View style={{ flexDirection: "row", position: "absolute", top: 50 }}>
         <View style={{ paddingRight: 50 }}>
           <Text style={styles.creatorName}>Olivia Franz</Text>
           <Text>101k total followers</Text>
@@ -24,15 +26,23 @@ export default function ProfileScreen({
         />
       </View>
 
-      <Text style={styles.title}> Channels </Text>
+      <ChannelSection />
+      <View style={{ alignSelf: "flex-end", paddingTop: 10, paddingRight: 20 }}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() => navigation.navigate("Modal")}
+        >
+          <AntDesign name="adduser" size={24} color="#18D89F" />
+          <Text style={styles.buttonText}> Add a Channel </Text>
+        </TouchableOpacity>
+      </View>
 
-      <TouchableOpacity
-        style={styles.button}
-        onPress={() => navigation.navigate("Modal")}
-      >
-        <AntDesign name="adduser" size={24} color="#18D89F" />
-        <Text style={styles.buttonText}> Add a Channel </Text>
-      </TouchableOpacity>
+      <View style={{ position: "absolute", bottom: 50, alignItems: "center" }}>
+        <Text style={{ paddingBottom: 20 }}>Remove a Channel</Text>
+        <Text style={{ fontWeight: "normal", fontSize: 12, color: "red" }}>
+          Logout
+        </Text>
+      </View>
     </View>
   );
 }
@@ -42,13 +52,9 @@ const styles = StyleSheet.create({
     alignItems: "center",
     backgroundColor: "#ffffff",
     padding: 10,
-    borderRadius: 30,
-    borderColor: "#EDEDED",
-    borderStyle: "solid",
-    borderWidth: 1,
     flexDirection: "row",
     justifyContent: "center",
-    width: 200,
+    width: 150,
   },
   buttonText: {
     fontWeight: "500",

@@ -1,10 +1,10 @@
 import React from "react";
-import {useState} from "react";
-import { TouchableOpacity, Alert, ScrollView, Modal} from "react-native";
+import { useState } from "react";
+import { TouchableOpacity, Alert, ScrollView, Modal } from "react-native";
 import styles from "../../assets/styles/dashboard-style";
 
 import Income from "./income";
-import IncomeModal from "./income-modal"
+import IncomeModal from "./income-modal";
 
 import { Text, View } from "../Themed";
 
@@ -22,19 +22,16 @@ const incomeSection = () => {
         }}
       >
         <View style={styles.centeredView}>
-        <ScrollView>
-        <View style={{ flexDirection: "row", alignItems: "center" }}>
-        <Text style={styles.title}>Recent Income</Text>
-          <TouchableOpacity
-              onPress={() => setModalVisible(!modalVisible)}
-            >
-              <Text style={styles.textStyle}>Hide Modal</Text>
-            </TouchableOpacity>
-          </View>
+          <ScrollView>
+            <View style={{ flexDirection: "row", alignItems: "center" }}>
+              <Text style={styles.title}>Recent Income</Text>
+              <TouchableOpacity onPress={() => setModalVisible(!modalVisible)}>
+                <Text style={styles.textStyle}>Hide Modal</Text>
+              </TouchableOpacity>
+            </View>
             <IncomeModal />
-            </ScrollView>
+          </ScrollView>
         </View>
-
       </Modal>
 
       <View

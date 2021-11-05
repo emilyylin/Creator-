@@ -1,7 +1,8 @@
 import React from "react";
-import { Switch } from "react-native";
+import { TouchableOpacity } from "react-native";
+import ToggleSwitch from "toggle-switch-react-native";
 import { useState } from "react";
-
+import { MaterialIcons } from "@expo/vector-icons";
 import Chart from "./chart";
 
 import { Text, View } from "../Themed";
@@ -9,6 +10,9 @@ import { Text, View } from "../Themed";
 const chartSection = (props) => {
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
+
+  const [isVOR, setVOR] = useState(false);
+  const toggleVOR = () => setVOR((previousState) => !previousState);
   return (
     <View>
       <View
@@ -21,17 +25,26 @@ const chartSection = (props) => {
       >
         <View style={{ flexDirection: "column", alignItems: "left" }}>
           <Text style={{ fontWeight: "700", fontSize: 20 }}>November</Text>
-          <Text style={{ fontWeight: "600", fontSize: 15 }}>Revenue</Text>
+          <View style={{ flexDirection: "row", alignItems: "center" }}>
+            <Text style={{ fontWeight: "600", fontSize: 15, paddingRight: 5 }}>
+              Revenue
+            </Text>
+            <TouchableOpacity onPress={toggleVOR}>
+              <MaterialIcons name="compare-arrows" size={20} color="#18D89F" />
+            </TouchableOpacity>
+          </View>
         </View>
-
-        <Switch
-          trackColor={{ false: "#767577", true: "#767577" }}
-          thumbColor={isEnabled ? "#f4f3f4" : "#f4f3f4"}
-          ios_backgroundColor="#3e3e3e"
-          onValueChange={toggleSwitch}
-          value={isEnabled}
-          style={{ position: "absolute", right: 10 }}
-        />
+        <View style={{ position: "absolute", right: 10 }}>
+          <ToggleSwitch
+            isOn={isEnabled}
+            onColor="black"
+            offColor="black"
+            label={isEnabled ? "Month" : "Year"}
+            labelStyle={{ color: "black", fontWeight: "400" }}
+            size="small"
+            onToggle={toggleSwitch}
+          />
+        </View>
       </View>
       <Chart
         data={{

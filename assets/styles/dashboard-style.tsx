@@ -33,12 +33,11 @@ export default StyleSheet.create({
   },
   dropdown1RowTxtStyle: { color: "#444", textAlign: "left" },
 
-
   centeredView: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 60
+    marginTop: 60,
   },
   modalView: {
     margin: 20,
@@ -49,7 +48,7 @@ export default StyleSheet.create({
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
-      height: 2
+      height: 2,
     },
     shadowOpacity: 0.25,
     shadowRadius: 4,
@@ -58,10 +57,10 @@ export default StyleSheet.create({
   textStyle: {
     color: "#18D89F",
     fontWeight: "bold",
-    textAlign: "right"
+    textAlign: "right",
   },
   modalText: {
     marginBottom: 15,
-    textAlign: "center"
-  }
+    textAlign: "center",
+  },
 });
