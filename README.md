@@ -17,4 +17,9 @@ Creators can retrieve financial information on topics such as loans, investing, 
 # Tools & Technology we used
 React Native, Expo, TypeScript, Figma
 
+# How to Run
+In the project directory, you can run:
+`npm install`
+`expo start`
+
 Designed by Emma Wu & Developed by Emily Lin
