@@ -5,6 +5,8 @@ import { useState } from "react";
 import { MaterialIcons } from "@expo/vector-icons";
 import Chart from "./chart";
 import SelectDropdown from 'react-native-select-dropdown';
+import SummarySection from "./summary-section";
+import ViewsSection from "./views-section";
 
 import styles from "../../assets/styles/dashboard-style";
 
@@ -14,14 +16,116 @@ const chartSection = (props) => {
   const [isEnabled, setIsEnabled] = useState(false);
   const toggleSwitch = () => setIsEnabled((previousState) => !previousState);
 
-  const [isVOR, setVOR] = useState(false);
-  const toggleVOR = () => setVOR((previousState) => !previousState);
+  const [isRevenue, setRevenue] = useState(false);
+  const toggleVOR = () => setRevenue((previousState) => !previousState);
 
-  const [isSwitchSites, setSwitchSites] = useState(false);
+  const [isSwitchSites, setSwitchSites] = useState(true);
     
   const sites= ["All", "Youtube", "Twitch", "TikTok"];
+
+  let chart, datatype, summaryOrView;
+  if (isRevenue && !isEnabled) {
+    datatype = "Revenue"
+    summaryOrView=<SummarySection
+    totalearnings="3,565.40"
+    time="last week"
+    dollarchange="535.50"
+  />
+    chart = 
+    <Chart
+      yaxisLabel="$"
+      data={{
+        labels: ["Jan", "Mar", "May", "Jul", "Sept", "Nov"],
+        datasets: [
+          {
+            data: [Math.random() * 100,
+              Math.random() * 100,
+              Math.random() * 100,
+              Math.random() * 100,
+              Math.random() * 100,
+              Math.random() * 100,
+              Math.random() * 100,
+              Math.random() * 100,
+              Math.random() * 100,
+              (Math.random() * 100) +100],
+          },
+        ],
+      }}
+    />
+  } else if (isRevenue && isEnabled) {
+    datatype = "Revenue"
+    summaryOrView=<SummarySection
+    totalearnings="3,565.40"
+    time="last week"
+    dollarchange="535.50"
+  />
+    chart = <Chart 
+    yaxisLabel="$"
+    data={{
+    labels: ["0", "5", "10", "15", "20", "25", "30"],
+    datasets: [
+      {
+        data: [Math.random() * 10,
+          Math.random() * 10,
+          Math.random() * 10,
+          Math.random() * 10,
+          Math.random() * 10,
+          Math.random() * 10,
+          Math.random() * 10,
+          Math.random() * 10,
+          Math.random() * 10,
+          (Math.random() * 10) +15],
+      },
+    ],
+  }}/>
+  } else if (!isRevenue && isEnabled) {
+    datatype="Views"
+    summaryOrView=<ViewsSection totalviews="5.1M" time="last year" viewchange="200k" />
+    chart = <Chart 
+    yaxisLabel=""
+    data={{
+    labels: ["0", "5", "10", "15", "20", "25", "30"],
+    datasets: [
+      {
+        data: [Math.random() * 10,
+          Math.random() * 10,
+          Math.random() * 10,
+          Math.random() * 10,
+          Math.random() * 10,
+          Math.random() * 10,
+          Math.random() * 10,
+          Math.random() * 10,
+          Math.random() * 10,
+          (Math.random() * 10) +15],
+      },
+    ],
+  }}/>
+  } else {
+    datatype="Views"
+    summaryOrView=<ViewsSection totalviews="5.1M" time="last year" viewchange="200k" />
+    chart = <Chart 
+          yaxisLabel=""
+          data={{
+          labels: ["Jan", "Mar", "May", "Jul", "Sept", "Nov"],
+          datasets: [
+            {
+              data: [Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                Math.random() * 100,
+                (Math.random() * 100) +100],
+            },
+          ],
+        }}/>
+  }
   return (
     <View>
+      {summaryOrView}
       <View
         style={{
           flexDirection: "row",
@@ -34,7 +138,7 @@ const chartSection = (props) => {
           <Text style={{ fontWeight: "700", fontSize: 20 }}>November</Text>
           <View style={{ flexDirection: "row", alignItems: "center" }}>
             <Text style={{ fontWeight: "600", fontSize: 15, paddingRight: 5 }}>
-              Revenue
+              {datatype}
             </Text>
             <TouchableOpacity onPress={toggleVOR}>
               <MaterialIcons name="compare-arrows" size={20} color="#18D89F" />
@@ -77,43 +181,8 @@ const chartSection = (props) => {
         </TouchableOpacity>
         </View>
       </View>
-      <Chart
-        data={{
-          labels: ["Jan", "Mar", "May", "Jul", "Sept", "Nov"],
-          datasets: [
-            {
-              data: [Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                (Math.random() * 100) +100],
-            },
-          ],
-        }}
-        isNegative={false}
-      />
-      {/* <Chart data={{
-          labels: ["0", "5", "10", "15", "20", "25", "30"],
-          datasets: [
-            {
-              data: [Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                Math.random() * 100,
-                (Math.random() * 100) +100],
-            },
-          ],
-        }}/> */}
+      {chart}
+
     </View>
   );
 };

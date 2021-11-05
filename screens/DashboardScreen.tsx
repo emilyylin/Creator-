@@ -34,13 +34,6 @@ export default function DashboardScreen({
             source={require("../assets/images/profile-images/olivia.png")}
           />
         </View>
-
-        <SummarySection
-          totalearnings="3,565.40"
-          time="last week"
-          dollarchange="535.50"
-        />
-        {/* <ViewsSection totalviews="5.1M" time="last year" viewchange="200k" /> */}
         <ChartSection />
         <ActivitySection />
         <StatsSection />

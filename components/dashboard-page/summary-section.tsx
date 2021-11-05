@@ -1,4 +1,5 @@
 import React from "react";
+import {useEffect, useState} from "react";
 import { Image } from "react-native";
 
 import { Entypo } from "@expo/vector-icons";
@@ -9,7 +10,7 @@ const summarySection = (props) => {
   return (
     <View>
       <Text style={{ fontWeight: "400", fontSize: 12 }}>Your Summary</Text>
-      <Text style={{ fontWeight: "700", fontSize: 40 }}>
+      <Text style={{ fontWeight: "700", fontSize: 40}}>
         ${props.totalearnings}
       </Text>
 
@@ -21,7 +22,7 @@ const summarySection = (props) => {
         }}
       >
         <Entypo name="triangle-up" size={12} color="#35B234" />
-        <Text style={{ fontWeight: "400", fontSize: 12, color: "#35B234" }}>
+        <Text style={{ fontWeight: "400", fontSize: 12, color: "#35B234"}}>
           up ${props.dollarchange} in the {props.time}
         </Text>
       </View>

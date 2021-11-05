@@ -14,7 +14,7 @@ const chart = (props) => {
         data={props.data}
         width={Dimensions.get("window").width} // from react-native
         height={220}
-        yAxisLabel="$"
+        yAxisLabel={props.yaxisLabel}
         yAxisSuffix="k"
         yAxisInterval={1} // optional, defaults to 1
         chartConfig={{
@@ -29,6 +29,7 @@ const chart = (props) => {
         style={{
           marginVertical: 8,
           borderRadius: 16,
+          marginLeft:-10
         }}
       />
     </View>
