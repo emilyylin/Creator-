@@ -4,12 +4,15 @@ import { StyleSheet, Dimensions, Switch, Image } from "react-native";
 // import { Switch } from 'react-native-switch';
 
 import { Foundation } from "@expo/vector-icons";
+import { Entypo } from "@expo/vector-icons";
 
 import EditScreenInfo from "../components/EditScreenInfo";
 import { Text, View } from "../components/Themed";
 import { RootTabScreenProps } from "../types";
 
 import { LineChart, ProgressChart } from "react-native-chart-kit";
+import Chart from "../components/dashboard-page/chart.tsx";
+import ActivitySection from "../components/dashboard-page/activity-section.tsx";
 
 export default function DashboardScreen({
   navigation,
@@ -19,20 +22,46 @@ export default function DashboardScreen({
 
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Welcome, Olivia</Text>
-      <Image source={require("../assets/images/profile-images/olivia.png")} />
-      <Text style={styles.title}>Your Summary</Text>
-      <Text style={styles.title}>$3,565.40</Text>
-      <Text style={styles.title}>November</Text>
-      <Text style={styles.title}>Revenue</Text>
-      <Switch
-        trackColor={{ false: "#767577", true: "#767577" }}
-        thumbColor={isEnabled ? "#f4f3f4" : "#f4f3f4"}
-        ios_backgroundColor="#3e3e3e"
-        onValueChange={toggleSwitch}
-        value={isEnabled}
-      />
-      <LineChart
+      <View style={{ flexDirection: "row", alignItems: "center" }}>
+        <Text style={{ fontWeight: "600", fontSize: 25, paddingRight: 20 }}>
+          Welcome, Olivia
+        </Text>
+        <Image source={require("../assets/images/profile-images/olivia.png")} />
+      </View>
+
+      <Text style={{ fontWeight: "400", fontSize: 12 }}>Your Summary</Text>
+      <Text style={{ fontWeight: "700", fontSize: 40 }}>$3,565.40</Text>
+
+      <View style={{ flexDirection: "row", alignItems: "center" }}>
+        <Entypo name="triangle-up" size={12} color="#35B234" />
+        <Text style={{ fontWeight: "400", fontSize: 12, color: "#35B234" }}>
+          up $532.50 iin the last week
+        </Text>
+      </View>
+
+      <View
+        style={{
+          flexDirection: "row",
+          alignItems: "center",
+          paddingTop: 20,
+          paddingBottom: 20,
+        }}
+      >
+        <View style={{ flexDirection: "column", alignItems: "left" }}>
+          <Text style={{ fontWeight: "700", fontSize: 20 }}>November</Text>
+          <Text style={{ fontWeight: "600", fontSize: 15 }}>Revenue</Text>
+        </View>
+
+        <Switch
+          trackColor={{ false: "#767577", true: "#767577" }}
+          thumbColor={isEnabled ? "#f4f3f4" : "#f4f3f4"}
+          ios_backgroundColor="#3e3e3e"
+          onValueChange={toggleSwitch}
+          value={isEnabled}
+          style={{ position: "absolute", right: 10 }}
+        />
+      </View>
+      <Chart
         data={{
           labels: ["Jan", "Mar", "May", "Jul", "Sept", "Nov"],
           datasets: [
@@ -41,25 +70,9 @@ export default function DashboardScreen({
             },
           ],
         }}
-        width={Dimensions.get("window").width} // from react-native
-        height={220}
-        yAxisLabel="$"
-        yAxisSuffix="k"
-        yAxisInterval={1} // optional, defaults to 1
-        chartConfig={{
-          backgroundColor: "#ffffff",
-          backgroundGradientFrom: "#ffffff",
-          backgroundGradientTo: "#ffffff",
-          decimalPlaces: 2, // optional, defaults to 2dp
-          color: (opacity = 1) => `rgba(24, 216, 159, ${opacity})`,
-          labelColor: (opacity = 1) => `rgba(0, 0, 0, ${opacity})`,
-        }}
-        bezier
-        style={{
-          marginVertical: 8,
-          borderRadius: 16,
-        }}
       />
+
+      <ActivitySection />
     </View>
   );
 }
@@ -67,8 +80,8 @@ export default function DashboardScreen({
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
     justifyContent: "center",
+    padding: 20,
   },
   title: {
     fontSize: 20,

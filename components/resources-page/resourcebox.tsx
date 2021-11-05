@@ -6,19 +6,15 @@ import { MaterialIcons } from "@expo/vector-icons";
 import { Text, View } from "../Themed";
 
 const resourcebox = (props) => {
-    const onPress = () =>
-    Linking.canOpenURL(
-      props.url
-    ).then(() => {
-      Linking.openURL(
-        props.url
-      );
+  const onPress = () =>
+    Linking.canOpenURL(props.url).then(() => {
+      Linking.openURL(props.url);
     });
 
   return (
     <View>
       <TouchableOpacity
-       onPress={onPress}
+        onPress={onPress}
         style={{
           backgroundColor: "#EDEDED",
           padding: 20,
