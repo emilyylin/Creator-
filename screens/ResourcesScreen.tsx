@@ -41,10 +41,8 @@ export default function ResourcesScreen({
         <ResourceBox name="Line of Credit" url="https://www.td.com/ca/en/personal-banking/how-to/borrowing/compare-loans-and-lines-of-credit/?tdtab=1&cm_sp=:GOOGLE:EN+-+Line+of+Credit+-+Brand+(22_S_PL_LUC_AO_ACQ_ENFR_NAT):DIF:Line+of+Credit+-+BR+-+Exact&gclid=CjwKCAjwiY6MBhBqEiwARFSCPnH4qAIUcYYla9JMIkscQOC193VXmc2S8Gl2fv2Db_70L8PCkgFgxxoC_NoQAvD_BwE&gclsrc=aw.ds"/>
         <ResourceBox name="Mortgage" url="https://www.td.com/ca/en/personal-banking/products/mortgages/first-time-home-buyer/pre-approval/?GOOGLE&Mortgage+-+Brand+-+English+(22_S_RL_RMO_AO_ACQ_ENFR)&Mortgage+Core+-+Brand+-+Exact&ds_rl=1265821&ds_rl=1266773&ds_rl=1265821&gclid=CjwKCAjwiY6MBhBqEiwARFSCPoef7clFf-h3xu7SWtyCY99-LiOir3KlzNB31vuvtTPbj8FkQW5KGRoCLOkQAvD_BwE&gclsrc=aw.ds"/>
       </View>
-    </View>
 
       <Text style={styles.title}> FAQ </Text>
-    <View style={styles.container}>
         <FAQ
           question="How can I apply for a loan online?"
           answer="You don't You don't You don't You don't"
@@ -82,11 +80,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   title: {
-    fontSize: 20,
+    fontSize: 22,
     fontWeight: "bold",
     textAlign: "left",
-    paddingTop: 20,
-    paddingLeft: 40,
+    paddingTop: 40,
+    paddingBottom: 10,
     backgroundColor:"white"
   },
   resourcesBox: {
