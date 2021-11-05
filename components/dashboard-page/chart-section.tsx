@@ -27,7 +27,7 @@ const chartSection = (props) => {
   if (isRevenue && !isEnabled) {
     datatype = "Revenue"
     summaryOrView=<SummarySection
-    totalearnings="3,565.40"
+    totalearnings="55,565.40"
     time="last week"
     dollarchange="535.50"
   />
