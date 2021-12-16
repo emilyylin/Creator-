@@ -3,7 +3,9 @@ Creators today are their own businesses. However, full time content creators oft
  <br>
 <br>
 So how can creators prove to the bank that they can earn a steady income?
+<br>
 Video Demo: https://youtu.be/PnzQud8rxj4
+<br>
 Presentation Slides: https://drive.google.com/file/d/1VinKT5oyG6ot_x87qtxe6Z5LcFQnLzUl/view?usp=sharing
 
 # What it does
