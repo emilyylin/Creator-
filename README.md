@@ -22,9 +22,9 @@ Creators can retrieve financial information on topics such as loans, investing, 
 React Native, Expo, TypeScript, Figma
 
 # How to Run
-In the project directory, you can run:
-`npm install`
-`expo start`
-Download the expo app and scan the QR code if you're on your mobile device. Otherwise, open up an iOS/android emulator.
+In the project directory, you can run: 
+<br> `npm install`
+<br> `expo start`
+<br> Download the expo app and scan the QR code if you're on your mobile device. Otherwise, open up an iOS/android emulator.
 
 Designed by Emma Wu & Developed by Emily Lin
