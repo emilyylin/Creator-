@@ -15,10 +15,6 @@ The creator is rewarded with cashback bonuses based on positive performing metri
 #### A Resources Section
 Creators can retrieve financial information on topics such as loans, investing, line of credit and applying for a mortgage. The FAQ section which is dedicated to common questions that creators might have regarding financial services and how it impacts them.
 
-# How to Run
-`expo start`
-Download the expo app and scan the QR code if you're on your mobile device. Otherwise, open up an iOS/android emulator.
-
 # Tools & Technology we used
 React Native, Expo, TypeScript, Figma
 
@@ -26,5 +22,6 @@ React Native, Expo, TypeScript, Figma
 In the project directory, you can run:
 `npm install`
 `expo start`
+Download the expo app and scan the QR code if you're on your mobile device. Otherwise, open up an iOS/android emulator.
 
 Designed by Emma Wu & Developed by Emily Lin
