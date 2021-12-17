@@ -4,9 +4,11 @@ Creators today are their own businesses. However, full time content creators oft
 <br>
 So how can creators prove to the bank that they can earn a steady income?
 <br>
-Video Demo: https://youtu.be/PnzQud8rxj4
+Video (Dev) Demo: https://youtu.be/PnzQud8rxj4
 <br>
 Presentation Slides: https://drive.google.com/file/d/1VinKT5oyG6ot_x87qtxe6Z5LcFQnLzUl/view?usp=sharing
+<br>
+Figma Demo: https://www.figma.com/proto/Pl1auxQVAR4d8IfV27avOv/Creator-Copy?scaling=scale-down&starting-point-node-id=50%3A8259&show-proto-sidebar=1
 
 # What it does
 Creator+ helps creators with money management, metrics, and access to banking services.
